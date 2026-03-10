@@ -1,0 +1,13 @@
+name: _
+publish_to: none
+
+environment:
+  sdk: '^3.8.0'
+
+workspace:
+  - sinar_apps_client
+  - sinar_apps_server
+  - sinar_apps_flutter
+dependency_overrides:
+  flutter_secure_storage: ^10.0.0
+

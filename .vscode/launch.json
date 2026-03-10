@@ -1,0 +1,38 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "sinar_apps_flutter",
+            "cwd": "${workspaceFolder}/sinar_apps_flutter",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main.dart"
+        },
+        {
+            "name": "sinar_apps_server",
+            "cwd": "${workspaceFolder}/sinar_apps_server",
+            "request": "launch",
+            "type": "dart",
+            "preLaunchTask": "docker_compose_up",
+            "program": "bin/main.dart",
+            "env": {
+                "SERVERPOD_PASSWORD_database": "asocvZH23lo6PXx_q5MSaimRILamwahr"
+            },
+            "args": [
+                "--apply-migrations"
+            ]
+        }
+    ],
+    "compounds": [
+        {
+            "name": "sinar_apps (full stack)",
+            "configurations": [
+                "sinar_apps_server",
+                "sinar_apps_flutter"
+            ],
+            "presentation": {
+                "order": 1
+            }
+        }
+    ]
+}
