@@ -9,7 +9,5 @@ emailIdp:
   - hasAccount:
 jwtRefresh:
   - refreshAccessToken:
-greeting:
-  - hello:
 sinar:
   - process:
